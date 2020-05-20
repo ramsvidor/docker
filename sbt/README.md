@@ -6,7 +6,7 @@
 
 Image for building and running sbt and Scala projects.
 
-**@see** [Dockerfile](https://github.com/ramsvidor/docker-graalvm/blob/master/sbt/Dockerfile)
+**@see** [Dockerfile](https://github.com/ramsvidor/docker/blob/master/sbt/Dockerfile)
 
 ## Base image
 * [ramsvidor/graalvm](https://hub.docker.com/ramsvidor/graalvm) (GraalVM 20.1.0 / JDK 11 / Debian Stretch Slim)

@@ -6,7 +6,7 @@
 
 Hands-on Docker image for Java applications running on [GraalVM CE](https://www.graalvm.org) and [Debian](https://www.debian.org).
 
-**@see** [Dockerfile](https://github.com/ramsvidor/docker-graalvm/blob/master/graalvm/Dockerfile)
+**@see** [Dockerfile](https://github.com/ramsvidor/docker/blob/master/graalvm/Dockerfile)
 
 
 ## How to use this image
