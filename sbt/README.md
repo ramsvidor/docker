@@ -1,5 +1,8 @@
 # Scala and sbt for Docker
 [![](https://images.microbadger.com/badges/image/ramsvidor/sbt.svg)](https://microbadger.com/images/ramsvidor/sbt "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/ramsvidor/sbt.svg)](http://microbadger.com/images/ramsvidor/sbt "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/commit/ramsvidor/sbt.svg)](http://microbadger.com/images/ramsvidor/sbt "Get your own commit badge on microbadger.com")
+[![](https://images.microbadger.com/badges/license/ramsvidor/sbt.svg)](http://microbadger.com/images/ramsvidor/sbt "Get your own license badge on microbadger.com")
 
 Image for building and running sbt and Scala projects.
 
