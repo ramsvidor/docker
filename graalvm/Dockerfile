@@ -1,8 +1,8 @@
-ARG DEBIAN_IMAGE_VERSION
-FROM debian:${DEBIAN_IMAGE_VERSION:-"stretch-slim"}
+ARG DEBIAN_IMAGE_VERSION="stretch-slim"
+FROM debian:${DEBIAN_IMAGE_VERSION}
 
-ARG JDK_VERSION
-ARG GRAALVM_VERSION
+ARG JDK_VERSION="11"
+ARG GRAALVM_VERSION="20.1.0"
 ARG VCS_REF
 ARG VCS_URL
 ARG BUILD_DATE
@@ -13,8 +13,6 @@ LABEL maintainer="Ramses Vidor <ramsvidor@gmail.com>" \
       org.label-schema.build-date="${BUILD_DATE}"
 
 ENV LANG="C.UTF-8" \
-    JDK_VERSION=${JDK_VERSION:-"11"} \
-    GRAALVM_VERSION=${GRAALVM_VERSION:-"20.1.0"} \
     INSTALL_DIR="/usr/lib/java" \
     DOWNLOAD_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download"
 ENV JAVA_HOME="${INSTALL_DIR}/graalvm-ce-java${JDK_VERSION}-${GRAALVM_VERSION}"
