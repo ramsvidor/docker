@@ -12,7 +12,8 @@ LABEL maintainer="Ramses Vidor <ramsvidor@gmail.com>" \
       org.label-schema.schema-version="1.0" \
       org.label-schema.vcs-ref="${VCS_REF}" \
       org.label-schema.vcs-url="${VCS_URL}" \
-      org.label-schema.build-date="${BUILD_DATE}"
+      org.label-schema.build-date="${BUILD_DATE}" \
+      com.ramsesvidor.license="Apache-2.0"
 
 ENV INSTALL_DIR="/usr/lib/scala"
 ENV SCALA_HOME="${INSTALL_DIR}/scala-${SCALA_VERSION}"
