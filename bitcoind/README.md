@@ -9,6 +9,9 @@ Hands-on Docker image for Bitcoin Core daemon development running on [Debian](ht
 This is a very minimalist container just for running testnet and develop on top of it. It cointains only the `bitcoind`
 executable and should be queried from outside the container with `curl` or other similar tools.
 
+Out-of-the-box, this image is configured to bind to all interfaces and default RPC authentication is 
+`rpcuser=bitcoind` and `rpcpassword=secret`. **!!!DON'T RUN WITH THESE SETTINGS IN PRODUCTION!!!**
+
 **@see** [Dockerfile](https://github.com/ramsvidor/docker/blob/master/bitcoind/Dockerfile)
 
 
