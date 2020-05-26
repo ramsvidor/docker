@@ -21,8 +21,8 @@ ENV JAVA_HOME="${INSTALL_DIR}/graalvm-ce-java${JDK_VERSION}-${GRAALVM_VERSION}"
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 RUN apt-get update -qq; \
-    apt-get autoremove -qq --purge; \
     apt-get install -qq --no-install-recommends wget ca-certificates p11-kit; \
+    apt-get autoremove -qq --purge; \
     mkdir -m 755 -p "${INSTALL_DIR}"; \
     wget -qO- "${DOWNLOAD_URL}/vm-${GRAALVM_VERSION}/graalvm-ce-java${JDK_VERSION}-linux-amd64-${GRAALVM_VERSION}.tar.gz" \
             | tar xfz - -C "${INSTALL_DIR}"; \
