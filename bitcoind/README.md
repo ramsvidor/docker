@@ -1,10 +1,10 @@
-# Debian based Bitcoin Core daemon for Docker
+# Debian based Bitcoin Core for Docker
 [![](https://images.microbadger.com/badges/image/ramsvidor/bitcoind.svg)](https://microbadger.com/images/ramsvidor/bitcoind "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/ramsvidor/bitcoind.svg)](http://microbadger.com/images/ramsvidor/bitcoind "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/commit/ramsvidor/bitcoind.svg)](http://microbadger.com/images/ramsvidor/bitcoind "Get your own commit badge on microbadger.com")
 [![](https://images.microbadger.com/badges/license/ramsvidor/bitcoind.svg)](http://microbadger.com/images/ramsvidor/bitcoind "Get your own license badge on microbadger.com")
 
-Hands-on Docker image for Bitcoin Core daemon development running on [Debian](https://www.debian.org).
+Hands-on Docker image for Bitcoin Core development running on [Debian](https://www.debian.org).
 
 This is a very minimalist container just for running testnet and develop on top of it. It cointains only the `bitcoind`
 executable and should be queried from outside the container with `curl` or other similar tools.
@@ -14,6 +14,8 @@ Out-of-the-box, this image is configured to bind to all interfaces and default R
 
 **@see** [Dockerfile](https://github.com/ramsvidor/docker/blob/master/bitcoind/Dockerfile)
 
+## Base image
+* [Official Debian 9 (Stretch)](https://hub.docker.com/_/debian) - stretch-slim variant.
 
 ## How to use this image
 ### Pull and start a Bitcoin Core daemon instance

@@ -8,6 +8,8 @@ Hands-on Docker image for Java applications running on [GraalVM CE](https://www.
 
 **@see** [Dockerfile](https://github.com/ramsvidor/docker/blob/master/graalvm/Dockerfile)
 
+## Base image
+* [Official Debian 9 (Stretch)](https://hub.docker.com/_/debian) - stretch-slim variant.
 
 ## How to use this image
 ### Pull and start a Java instance
