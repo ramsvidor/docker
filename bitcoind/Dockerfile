@@ -12,14 +12,18 @@ LABEL maintainer="Ramses Vidor <ramsvidor@gmail.com>" \
       org.label-schema.build-date="${BUILD_DATE}" \
       com.ramsesvidor.license="Apache-2.0"
 
-RUN apt-get update; apt-get install -y --no-install-recommends wget ca-certificates; \
+RUN apt-get update; \
+    # curl and wget might be usefull for using in combination with blocknotify and walletnotify callbacks
+    # ca-certificates is required for calling HTTPS endpoints
+    apt-get install -y --no-install-recommends wget curl ca-certificates; \
     adduser --system --group --home /var/lib/bitcoind --shell /bin/bash bitcoind; cd /usr/src; \
     wget -O- "https://bitcoin.org/bin/bitcoin-core-${BITCOIND_VERSION}/bitcoin-${BITCOIND_VERSION}-x86_64-linux-gnu.tar.gz" \
         | tar xzf -; \
-    install -v -m 0750 -o bitcoind -g bitcoind -t /usr/local/bin bitcoin-${BITCOIND_VERSION}/bin/bitcoind; \
+    install -v -m 0750 -o bitcoind -g bitcoind -t /usr/local/bin \
+        bitcoin-${BITCOIND_VERSION}/bin/bitcoin-cli \
+        bitcoin-${BITCOIND_VERSION}/bin/bitcoind; \
     install -v -m 0750 -o bitcoind -g bitcoind -d /etc/bitcoind /run/bitcoind; \
-    apt-get remove --purge wget ca-certificates; \
-    apt-get autoremove --purge; \
+    apt-get autoremove --purge; apt-get clean; \
     rm -rf /usr/src/* /var/lib/apt/lists/* /var/cache/apt/* /tmp/*
 
 USER bitcoind:bitcoind
