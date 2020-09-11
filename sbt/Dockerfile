@@ -1,8 +1,8 @@
 # credits to hseeberger/sbt-scala
 FROM ramsvidor/graalvm
 
-ARG SCALA_VERSION="2.13.2"
-ARG SBT_VERSION="1.3.10"
+ARG SCALA_VERSION="2.13.3"
+ARG SBT_VERSION="1.3.13"
 ARG APPUSER="marvin"
 ARG VCS_REF
 ARG VCS_URL
